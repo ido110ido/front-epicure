@@ -1,0 +1,39 @@
+.AboutCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 529px;
+  width: 100%;
+  background: #fafafa;
+}
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 40px 132px;
+  justify-content: space-between;
+  align-items: center;
+}
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 16px;
+}
+.leftSide > div {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .AboutCard {
+    height: fit-content;
+  }
+  .mainDiv {
+    flex-direction: column-reverse;
+    margin: 24px 20px;
+    margin-bottom: 48px;
+    gap: 32px;
+    align-items: baseline;
+  }
+}

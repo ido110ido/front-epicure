@@ -1,0 +1,122 @@
+.cardDish {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  min-width: 380px;
+  max-width: 380px;
+  height: 654px;
+  gap: 8px;
+  background: #f9f4ea;
+}
+.title {
+  font-family: "HelveticaNeueMedium";
+}
+.foodTypeLogo {
+  object-fit: none;
+}
+.small {
+  min-width: 272px;
+  height: 413px;
+  font-size: 20px;
+}
+.dishImg {
+  width: 100%;
+  height: 43%;
+  margin-bottom: 24px;
+}
+
+.foodTypes {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.rating {
+  width: 216px;
+  height: 40px;
+}
+p {
+  margin: 0;
+}
+.price {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 7px;
+  width: 80%;
+  gap: 8px;
+  align-items: start;
+}
+.price > hr {
+  width: -webkit-fill-available;
+  height: 0px;
+  border: 0.5px solid #979797;
+}
+.price > span {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+/****Detail Dish***/
+.dishDetailImg {
+  width: 100%;
+  height: 292px;
+}
+.detailDish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+.priceNotAbsolute {
+  position: static;
+}
+.foodTypesDetailWindows {
+  font-size: 14px;
+}
+.choosingBlock {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  gap: 24px;
+}
+.underlineTitle {
+  border-bottom: 1.8px solid rgba(222, 146, 0, 0.9);
+  padding-bottom: 8px;
+  cursor: pointer;
+  width: fit-content;
+  align-self: center;
+  text-decoration: none;
+  color: #000000;
+  font-size: 22px;
+  text-align: center;
+}
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+}
+.Quantity {
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.Quantity > button {
+  font-size: 50px;
+  height: fit-content;
+}
+.ingredients {
+  height: 26%;
+  overflow-y: scroll;
+}
+.focusButton:active {
+  scale: 1.5;
+}

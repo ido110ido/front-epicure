@@ -1,0 +1,43 @@
+.ChefOfTheWeek {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  gap: 40px;
+}
+.aboutMe {
+  text-align: justify;
+}
+.titleCompo {
+  display: flex;
+  align-self: center;
+}
+.chefAndAboutMe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 64px;
+}
+.resturantRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 16px;
+  overflow-x: scroll;
+}
+.resturantRow::-webkit-scrollbar {
+  height: 7px;
+}
+.resturantRow::-webkit-scrollbar-track {
+  background: transparent;
+}
+.resturantRow::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: gray;
+}
+.resturantRow::-webkit-scrollbar-thumb:hover {
+  background: rgb(93, 93, 93);
+}

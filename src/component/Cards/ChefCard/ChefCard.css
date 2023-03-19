@@ -1,0 +1,50 @@
+.cardChef {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column-reverse;
+  min-width: 478px;
+  height: 372px;
+  transition: height 0.5s, opacity 0.5s;
+}
+.removeChef {
+  height: 0;
+  opacity: 0;
+}
+.chefImg {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.buttomCard {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 78px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  transition: 0.5s;
+}
+.buttomCard > h3 {
+  margin-top: 15px;
+}
+.cardChef:hover .buttomCard {
+  height: 120px;
+}
+#chefRemoveButton {
+  position: absolute;
+  color: white;
+  font-weight: 800;
+  top: -10px;
+  left: 10px;
+  height: fit-content;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s, top 0.5s;
+}
+.cardChef:hover #chefRemoveButton {
+  top: 5px;
+  opacity: 1;
+}

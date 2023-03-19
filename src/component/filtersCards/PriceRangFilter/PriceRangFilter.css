@@ -1,0 +1,62 @@
+:root {
+  --gray: #e4e4e4;
+  --char-coal: #383838;
+  --white: #fff;
+}
+.priceRenege {
+  width: 353px;
+  height: 162px;
+  padding: 23px 12px 23px 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.priceRenege > h4 {
+  margin: 0;
+  font-family: "HelveticaNeueLight";
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 1.92px;
+}
+.SliderContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 309px;
+  height: 56px;
+  background: #f9f4ea;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 10px;
+}
+.slider {
+  cursor: pointer;
+  width: calc(100% - 30px);
+}
+.track {
+  border: 4px solid rgba(213, 213, 213, 0.5);
+  border-radius: 2px;
+}
+.track:nth-child(2) {
+  border: 4px solid rgba(151, 151, 151, 0.5);
+  border-radius: 2px;
+}
+.thumb {
+  width: 23px;
+  height: 23px;
+  background: #000000;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  top: -7px;
+}
+.SliderValues {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+}
+.SliderValues > span {
+  font-size: 18px;
+}

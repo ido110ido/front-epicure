@@ -1,0 +1,30 @@
+.row {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  width: 80%;
+  overflow-x: scroll;
+  padding-bottom: 5px;
+}
+.rowAndTitle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.textButton {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  bottom: -36px;
+  right: 10%;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}

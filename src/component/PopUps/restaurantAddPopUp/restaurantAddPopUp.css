@@ -1,0 +1,17 @@
+.datePicker {
+  width: fit-content;
+}
+.scroll > div {
+  width: fit-content;
+}
+.titleAdd {
+  margin-top: 30px;
+}
+.hours {
+  width: 120px;
+}
+.selectHours {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}

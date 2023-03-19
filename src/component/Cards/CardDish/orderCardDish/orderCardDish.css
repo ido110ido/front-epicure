@@ -1,0 +1,79 @@
+.orderCardDish {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  width: 342px;
+  height: 96px;
+  background: #f9f4ea;
+}
+.orderCardDish img {
+  width: 96px;
+  height: 100%;
+}
+.mainCardPart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 12px 12px 24px;
+  gap: 8px;
+}
+.mainCardPart > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+}
+.nameAndPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 6px;
+}
+.dishName {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1.97px;
+}
+.dishPrice {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.42278px;
+  color: #de9200;
+}
+.dishOption {
+  width: 150px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  text-align: left;
+  font-weight: 200;
+  left: 0;
+  font-size: 12px;
+  white-space: nowrap;
+  letter-spacing: 1.23px;
+}
+.amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 31px;
+  height: 31px;
+  border: 0.571429px solid #979797;
+  border-radius: 3.42857px;
+  font-weight: 600;
+  font-size: 18.1191px;
+  letter-spacing: 1.98303px;
+  color: #de9200;
+}
+.bigDishPrice {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1.97px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  color: #000000;
+}
