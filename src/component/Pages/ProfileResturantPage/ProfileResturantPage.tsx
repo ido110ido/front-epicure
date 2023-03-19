@@ -42,7 +42,7 @@ const RestaurantProfilePages = () => {
     if (id) {
       try {
         const restaurantsAfterDelete = await axios.delete(
-          "http://localhost:8000/restaurants",
+          "https://server-epicure.onrender.com/restaurants",
           {
             data: {
               id: id,

@@ -1,0 +1,8 @@
+.table body {
+  width: 100%;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.line > td {
+  height: 150px;
+}

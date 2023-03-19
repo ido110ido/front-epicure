@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Frame from "./component/Frame/Frame";
+import AdminPage from "./component/Pages/adminPage/adminPage";
 import ChafPage from "./component/Pages/ChefPage/ChefPage";
 import HomePage from "./component/Pages/HomePage/HomePage";
 import RestaurantProfilePages from "./component/Pages/ProfileResturantPage/ProfileResturantPage";
@@ -21,6 +22,7 @@ function App() {
             <Route path="chefs" element={<ChafPage />} />
             <Route path="singIn" element={<SingINPage />} />
             <Route path="singUp" element={<SingUpPage />} />
+            <Route path="admin" element={<AdminPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -45,7 +45,7 @@ const RestaurantAddPopUp: React.FC<IPopUpRestaurantAdding> = (props) => {
   const addingRestaurant = async () => {
     try {
       const updatedRestaurantsList = await axios.post(
-        "http://localhost:8000/restaurants/add",
+        "https://server-epicure.onrender.com/restaurants/add",
         {
           data: formData,
         }
