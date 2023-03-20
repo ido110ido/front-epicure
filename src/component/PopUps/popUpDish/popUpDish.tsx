@@ -72,7 +72,7 @@ const PopUpDish: React.FC<IPopUpDish> = (props) => {
   const delateDish = async () => {
     try {
       const dishesAfterDelete = await axios.delete(
-        "https://server-epicure.onrender.com/dishes",
+        "http://localhost:8000/dishes",
         {
           data: {
             id: dish._id,

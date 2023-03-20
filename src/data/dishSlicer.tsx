@@ -10,7 +10,7 @@ export interface IDishesState {
   value: IDish[];
 }
 const getDishData = async () => {
-  return await fetch("https://server-epicure.onrender.com/dishes")
+  return await fetch("http://localhost:8000/dishes")
     .then((response) => response.json())
     .then((data) => {
       return data.data;

@@ -31,6 +31,7 @@ const RestaurantProfilePages = () => {
   const dishes = useSelector((state: RootState) => state.dishes.value);
   const chef = useSelector((state: RootState) => state.chefs.chefName);
   const [currentTab, setCurrentTab] = useState<string>("Breakfast");
+  const user = JSON.parse(sessionStorage.getItem("user") ?? "null");
   const checkIfOpen = (): boolean => {
     const currentHour = new Date().getHours();
     return (
@@ -42,18 +43,19 @@ const RestaurantProfilePages = () => {
     if (id) {
       try {
         const restaurantsAfterDelete = await axios.delete(
-          "https://server-epicure.onrender.com/restaurants",
+          "http://localhost:8000/restaurants",
           {
             data: {
               id: id,
+            },
+            headers: {
+              Authorization: `Bearer ${user.token}`,
             },
           }
         );
 
         dispatch(updatedRestaurant(restaurantsAfterDelete.data.data));
         navigation(-1);
-        console.log("aaa");
-        console.log(restaurantsAfterDelete.data.data);
       } catch (error: any) {
         alert(error.response.data);
         return [];
@@ -72,9 +74,11 @@ const RestaurantProfilePages = () => {
         src={restaurantProfile[0].img}
         alt="restaurant image"
       />
-      <CleanButton className="removeButton" onClick={delateRestaurant}>
-        X
-      </CleanButton>
+      {user != null && (
+        <CleanButton className="removeButton" onClick={delateRestaurant}>
+          X
+        </CleanButton>
+      )}
       <h3>{restaurantProfile[0].name}</h3>
       <span>{chef}</span>
       <div className="restaurantOpenStatus">

@@ -12,7 +12,7 @@ const ChefTable = () => {
   // handle adding chef
   const chefs = useSelector((state: RootState) => state.chefs.value);
   return (
-    <div className="table body">
+    <div className="table_body">
       <table>
         <tr>
           <th>First Name</th>
@@ -22,7 +22,15 @@ const ChefTable = () => {
           <th>Start Date</th>
           <th>About</th>
         </tr>
-        {chefs.map((chef) => (
+        <tr>
+          <td>a</td>
+          <td>b</td>
+          <td>c</td>
+          <td>dfdsgfdfdfdfgdgfdgdgfdgfdgfdgfdgfdgfdgfdgfdgfdgfdgfdgf</td>
+          <td>e</td>
+          <td>f</td>
+        </tr>
+        {/* {chefs.map((chef) => (
           <tr className="line">
             <td>{chef.firstName}</td>
             <td>{chef.lastName}</td>
@@ -31,7 +39,7 @@ const ChefTable = () => {
             <td>{chef.startDate}</td>
             <td>{chef.about}</td>
           </tr>
-        ))}
+        ))} */}
       </table>
     </div>
   );

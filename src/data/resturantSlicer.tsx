@@ -9,7 +9,7 @@ export interface IRestaurantsState {
 }
 
 const getRestaurantData = async () => {
-  return await fetch("https://server-epicure.onrender.com/restaurants")
+  return await fetch("http://localhost:8000/restaurants")
     .then((response) => response.json())
     .then((data) => {
       return data.data;

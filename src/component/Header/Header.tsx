@@ -9,9 +9,7 @@ import { IUsers } from "../Types/Interfaces/IUser";
 import "./Header.css";
 const Header: React.FC = () => {
   const navigation: any = useNavigate();
-  const user: IUsers | null = JSON.parse(
-    sessionStorage.getItem("user") ?? "null"
-  );
+  const user = JSON.parse(sessionStorage.getItem("user") ?? "null");
   const [openBag, setOpenBag] = useState<boolean>(false);
   const modalRef = useRef<HTMLButtonElement>(null);
   return (

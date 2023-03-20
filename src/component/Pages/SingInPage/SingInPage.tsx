@@ -23,13 +23,10 @@ const SingINPage = () => {
   const CanLogIn: boolean = email.length > 5 && password.length > 8;
   const handleLogIn = async (event: React.MouseEvent<HTMLElement>) => {
     try {
-      const userReq = await axios.post(
-        "https://server-epicure.onrender.com/users/login",
-        {
-          email: email,
-          password: password,
-        }
-      );
+      const userReq = await axios.post("http://localhost:8000/users/login", {
+        email: email,
+        password: password,
+      });
       sessionStorage.setItem("user", JSON.stringify(userReq.data));
       navigation("/");
     } catch (error: any) {
@@ -43,6 +40,17 @@ const SingINPage = () => {
       {user ? (
         <>
           <h1>{"Hi " + user.first_name + " you are already logged in"}</h1>
+          <br />
+          <br />
+          <MainButton
+            isActive={true}
+            onClick={() => {
+              sessionStorage.clear();
+              window.location.reload();
+            }}
+          >
+            Log out
+          </MainButton>
         </>
       ) : (
         <>

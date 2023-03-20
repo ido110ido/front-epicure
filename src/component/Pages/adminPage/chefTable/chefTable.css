@@ -1,8 +1,20 @@
-.table body {
-  width: 100%;
+.table_body {
   font-size: 14px;
   white-space: nowrap;
+  text-align: center;
 }
-.line > td {
+.table_body > table {
+  border: 1px solid black;
+  width: 97vw;
+}
+.table_body > table > tr {
+  border: 1px solid black;
+  overflow: hidden;
   height: 150px;
+}
+.table_body > table > tr:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  background-color: rgb(177, 177, 177);
+  border: 1px solid black;
 }

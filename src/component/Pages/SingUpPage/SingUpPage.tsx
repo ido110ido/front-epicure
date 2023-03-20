@@ -16,15 +16,12 @@ const SingUpPage = () => {
   const [lastName, setLastName] = useState<string>("");
   const handleRegister = async (event: React.MouseEvent<HTMLElement>) => {
     try {
-      const userReq = await axios.post(
-        "https://server-epicure.onrender.com/users/signup",
-        {
-          first_name: firstName,
-          last_name: lastName,
-          email: email,
-          password: password,
-        }
-      );
+      const userReq = await axios.post("http://localhost:8000/users/signup", {
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        password: password,
+      });
       sessionStorage.setItem("user", JSON.stringify(userReq.data));
       navigation("/");
     } catch (error: any) {

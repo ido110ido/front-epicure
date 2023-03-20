@@ -8,6 +8,7 @@ import "./ChefCard.css";
 const ChefCard: React.FC<IChefCard> = (props) => {
   const dispatch = useDispatch();
   const chef = props.chefData;
+  const user = JSON.parse(sessionStorage.getItem("user") ?? "null");
   const [cardHeight, setCardHeight] = useState<string>("372px");
   const [cardOpacity, setCardOpacity] = useState<string>("1");
   const delateChef = async () => {
@@ -18,13 +19,16 @@ const ChefCard: React.FC<IChefCard> = (props) => {
           data: {
             id: chef._id,
           },
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
         }
       );
       setCardHeight("0");
       setCardOpacity("0");
       dispatch(updatedChefs(chefsAfterDelete.data.data));
     } catch (error: any) {
-      alert(error.response.data);
+      alert(error.response.data.message);
       return [];
     }
   };
@@ -34,14 +38,11 @@ const ChefCard: React.FC<IChefCard> = (props) => {
       style={{ height: cardHeight, opacity: cardOpacity }}
     >
       <img className="chefImg" src={chef.img} alt={chef.firstName} />
-      {
-        /* {props.Removable &&*/ <CleanButton
-          id="chefRemoveButton"
-          onClick={delateChef}
-        >
+      {user != null && (
+        <CleanButton id="chefRemoveButton" onClick={delateChef}>
           X
         </CleanButton>
-      }
+      )}
       <div className="buttomCard">
         <h3>{chef.firstName + " " + chef.lastName}</h3>
       </div>
