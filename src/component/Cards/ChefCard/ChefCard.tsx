@@ -14,7 +14,7 @@ const ChefCard: React.FC<IChefCard> = (props) => {
   const delateChef = async () => {
     try {
       const chefsAfterDelete = await axios.delete(
-        "http://localhost:8000/chefs",
+        "https://server-epicure.onrender.com/chefs",
         {
           data: {
             id: chef._id,

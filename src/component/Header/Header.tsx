@@ -11,11 +11,12 @@ const Header: React.FC = () => {
   const navigation: any = useNavigate();
   const user = JSON.parse(sessionStorage.getItem("user") ?? "null");
   const [openBag, setOpenBag] = useState<boolean>(false);
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
   const modalRef = useRef<HTMLButtonElement>(null);
   return (
     <header>
       <div className="headerFrame">
-        <nav>
+        <nav className="logoAndNav">
           <div
             className="logoDiv"
             onClick={() => {
@@ -37,6 +38,40 @@ const Header: React.FC = () => {
           >
             Chefs
           </NavLink>
+        </nav>
+        <nav className="dropDown">
+          <IconButton
+            iconUrl="/imges/hamburger.svg"
+            onClick={() => setOpenMenu(!openMenu)}
+          />
+          {openMenu && (
+            <div className="dropDownDIv">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "undeline" : "notActive"
+                }
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/resturants"
+                className={({ isActive }) =>
+                  isActive ? "undeline" : "notActive"
+                }
+              >
+                Restaurants
+              </NavLink>
+              <NavLink
+                to="/chefs"
+                className={({ isActive }) =>
+                  isActive ? "undeline" : "notActive"
+                }
+              >
+                Chefs
+              </NavLink>
+            </div>
+          )}
         </nav>
         {user && <h2>{"Hello, " + user.first_name}</h2>}
         <nav className="menu-right">

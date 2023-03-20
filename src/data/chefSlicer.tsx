@@ -8,7 +8,7 @@ export interface IChefState {
   singleChef: IChef | null;
 }
 const getChefsData = async () => {
-  return await fetch("http://localhost:8000/chefs")
+  return await fetch("https://server-epicure.onrender.com/chefs")
     .then((response) => response.json())
     .then((data) => {
       return data.data;

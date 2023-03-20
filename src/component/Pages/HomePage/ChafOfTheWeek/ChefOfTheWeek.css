@@ -41,3 +41,17 @@
 .resturantRow::-webkit-scrollbar-thumb:hover {
   background: rgb(93, 93, 93);
 }
+
+@media (max-width: 600px) {
+  .chefAndAboutMe {
+    flex-direction: column;
+    align-items: center;
+  }
+  .resturantRow {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardChef {
+    min-width: 400px;
+  }
+}
