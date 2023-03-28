@@ -4,6 +4,7 @@ interface IGrid {
 }
 export const GridCards = styled.div<IGrid>`
   display: grid;
+  justify-content: start;
   grid-template-columns: repeat(auto-fill, ${(props) => props.cellSize}px);
   width: calc(100% - 40px);
   justify-content: center;
